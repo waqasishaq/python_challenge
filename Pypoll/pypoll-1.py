@@ -39,7 +39,7 @@ with open(pypollfile1) as file_data:
         
         candidate_results = (candidate + " " + str(round(((candidate_votes[candidate]/Vote_count)*100))) + "%" + " (" + str(candidate_votes[candidate]) + ")") 
 
-# fiding winner_votes
+# finding winner_votes
 
 winner = max(candidate_votes.items(),key=lambda x: len(x))
 
@@ -66,15 +66,13 @@ with open(file_to_output, "w") as txt_file:
             
             txt_file.write(candidate + " " + str(round(((candidate_votes[candidate]/Vote_count)*100))) + "%" + " (" + str(candidate_votes[candidate]) + ")")
             txt_file.write("\n")
-        #txt_file.write(candidate + " " + str(round(((candidate_votes[candidate]/Vote_count)*100))) + "%" + " (" + str(candidate_votes[candidate]) + ")")
-
-        #txt_file.write(str(winner))
+        
 
         txt_file.write("-----------------------------------------------")
         txt_file.write("\n")
         txt_file.write("Winner: " + str(winner[0]))
         txt_file.write("\n")
         txt_file.write("-----------------------------------------------")
-        #txt_file.write("\n")
+        
 
         
